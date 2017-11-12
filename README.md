@@ -6,7 +6,16 @@ Project simply demonstrating basic Firebase features like auth, realtime databas
 
 Our project is called `vd-firebase` - if you want to follow steps, replace that name to your project name.
 
-Project overview: https://console.firebase.google.com/project/vd-firebase/overview
+Project overview in Firebase console: https://console.firebase.google.com/project/vd-firebase/overview
+
+## Commands
+```bash
+git checkout step0 # empty
+git checkout step1 # initialized
+git checkout step2 # auth ready
+git checkout step3 # db listeners ready
+git checkout step4 # completed
+```
 
 ## step 0 - empty project
 * run command `firebase init` to init Firebase project locally (choose functions and hosting)
