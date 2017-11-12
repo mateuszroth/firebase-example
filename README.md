@@ -2,9 +2,9 @@
 
 [Presentation](https://docs.google.com/presentation/d/1dWTA7zekaZtwP-RxNb85IuH4cjVKFtUdp599xAhFuAI/edit?usp=sharing)
 
-Project simply demonstrating basic Firebase features like auth, realtime database and cloud functions.
+A project which is simply demonstrating basic Firebase features like auth, realtime database and cloud functions.
 
-Our project is called `vd-firebase` - if you want to follow steps, replace that name to your project name.
+Our project is called `vd-firebase` - if you want to follow steps, replace that name to your project name whenever `vd-firebase` occurs.
 
 Project overview in Firebase console: https://console.firebase.google.com/project/vd-firebase/overview
 
@@ -14,22 +14,22 @@ git checkout step0 # empty
 git checkout step1 # initialized
 git checkout step2 # auth ready
 git checkout step3 # db listeners ready
-git checkout step4 # completed
+git checkout step4 # functions ready - completed
 ```
 
 ## step 0 - empty project
-* run command `firebase init` to init Firebase project locally (choose functions and hosting)
+* run command `firebase init` to init Firebase project locally (choose to configure functions and hosting only)
 * folders `functions` and `public` should be created
 * go to https://console.firebase.google.com/u/0/ and add a new project
-* run `firebase use --add` command and choose newly created project
+* run `firebase use --add` command and choose the newly created project
 * run `firebase serve` to serve `public` folder
 * go to http://localhost:5000
-* run `firebase deploy --only hosting` to deploy web app
-* app is available on https://vd-firebase.firebaseapp.com
+* run `firebase deploy --only hosting` to deploy the web app
+* the app is available on https://vd-firebase.firebaseapp.com
 
 ## step1 - already configured Firebase
-* turn on Google accounts for authhentication here: https://console.firebase.google.com/u/0/project/vd-firebase/authentication/providers
-* change `div` with id `message` to:
+* turn on Google accounts for authentication here: https://console.firebase.google.com/u/0/project/vd-firebase/authentication/providers
+* change the whole `div` element with id `message` to:
 ```
 <div id="message">
   <h2 id="loginHeader">Login</h2>
@@ -77,11 +77,11 @@ window.logout = logout
 * after you log in, a new user should appear here on the list: https://console.firebase.google.com/u/0/project/vd-firebase/authentication/users
 
 ## step2 - already configured auth process
-* save name of last user logged in:
+* save name of a last user logged in:
 ```
 firebase.database().ref('/lastUserLoggedIn').set(user.displayName)
 ```
-* look at the change of database tree: https://console.firebase.google.com/u/0/project/vd-firebase/database/data
+* look at the change of the database tree: https://console.firebase.google.com/u/0/project/vd-firebase/database/data
 * add code which subscribes changes on `lastUserLoggedIn` location:
 ```js
 firebase.database().ref('/lastUserLoggedIn').on('value', snapshot => {
@@ -122,7 +122,7 @@ exports.lastUserLoggedInCounter = functions.database.ref('/lastUserLoggedIn')
 ```
 * deploy function by running command `firebase deploy --only functions`
 * log in as a user in the web app
-* go to Firebase logs to check them: https://console.firebase.google.com/u/0/project/vd-firebase/functions/logs?search=&severity=DEBUG
-* look how data in database tree changes: https://console.firebase.google.com/u/0/project/vd-firebase/database/vd-firebase/data
+* go to Firebase logs page to check them: https://console.firebase.google.com/u/0/project/vd-firebase/functions/logs?search=&severity=DEBUG
+* look how data in database tree changes whenever someone logs in: https://console.firebase.google.com/u/0/project/vd-firebase/database/vd-firebase/data
 
 ## step 4 - project is completed
