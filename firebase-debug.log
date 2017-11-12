@@ -1,0 +1,36 @@
+[debug] [2017-11-12T18:22:31.118Z] ----------------------------------------------------------------------
+[debug] [2017-11-12T18:22:31.127Z] Command:       /Users/mateusz/.nvm/versions/node/v6.9.5/bin/node /Users/mateusz/.nvm/versions/node/v6.9.5/bin/firebase serve
+[debug] [2017-11-12T18:22:31.127Z] CLI Version:   3.13.1
+[debug] [2017-11-12T18:22:31.127Z] Platform:      darwin
+[debug] [2017-11-12T18:22:31.127Z] Node Version:  v6.9.5
+[debug] [2017-11-12T18:22:31.128Z] Time:          Sun Nov 12 2017 19:22:31 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:31.128Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-12T18:22:31.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-12T18:22:31.146Z] > authorizing via signed-in user
+[debug] [2017-11-12T18:22:31.149Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-12T18:22:31.150Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/IrbABk--zzMNB_mtZxiE82BLCbAg5KruGRrex3D33ruFTn3AvJBIuqMkGDK99KFt',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Nov 12 2017 19:22:31 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:33.014Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-12T18:22:33.019Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/vd-firebase  
+ Sun Nov 12 2017 19:22:33 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:34.361Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-12T18:22:34.364Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/vd-firebase/tokens  
+ Sun Nov 12 2017 19:22:34 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:35.689Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/mateusz/vd/firebase-example'...
+[info] 
+[debug] [2017-11-12T18:22:35.696Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/vd-firebase  
+ Sun Nov 12 2017 19:22:35 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:36.832Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-12T18:22:36.833Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/595124220242/clients/_:getWebAppConfig  
+ Sun Nov 12 2017 19:22:36 GMT+0100 (CET)
+[debug] [2017-11-12T18:22:37.973Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

@@ -54,6 +54,11 @@
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
           document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+          firebase.database().ref('/lastUserLoggedIn').on('value', snapshot => {
+            const value = snapshot.val()
+            console.log('user logged in', value)
+            document.getElementById('load').innerHTML = `Last user logged in ${value}`;
+          });
         } catch (e) {
           console.error(e);
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
@@ -69,6 +74,7 @@
             document.getElementById('loginHeader').innerHTML = `Logged in as ${user.displayName}`
             document.getElementById('login').setAttribute('style', 'display: none;')
             document.getElementById('logout').setAttribute('style', 'display: block;')
+            firebase.database().ref('/lastUserLoggedIn').set(user.displayName)
           }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
