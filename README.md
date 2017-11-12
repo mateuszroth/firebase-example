@@ -1,5 +1,7 @@
 # firebase-example
 
+[Presentation](https://docs.google.com/presentation/d/1dWTA7zekaZtwP-RxNb85IuH4cjVKFtUdp599xAhFuAI/edit?usp=sharing)
+
 Project simply demonstrating basic Firebase features like auth, realtime database and cloud functions.
 
 Our project is called `vd-firebase` - if you want to follow steps, replace that name to your project name.
