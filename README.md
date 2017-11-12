@@ -21,7 +21,7 @@ Project overview: https://console.firebase.google.com/project/vd-firebase/overvi
 ## step1 - already configured Firebase
 * turn on Google accounts for authhentication here: https://console.firebase.google.com/u/0/project/vd-firebase/authentication/providers
 * change `div` with id `message` to:
-```html
+```
 <div id="message">
   <h2 id="loginHeader">Login</h2>
   <button id="login" onclick="window.openAuthPopup()">Login with Google</button>
